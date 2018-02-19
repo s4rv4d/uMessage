@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		40C3C0D1203A7E9800346440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0D0203A7E9800346440 /* AppDelegate.swift */; };
-		40C3C0D3203A7E9800346440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0D2203A7E9800346440 /* ViewController.swift */; };
 		40C3C0D6203A7E9800346440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C3C0D4203A7E9800346440 /* Main.storyboard */; };
 		40C3C0D8203A7E9800346440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C3C0D7203A7E9800346440 /* Assets.xcassets */; };
 		40C3C0DB203A7E9800346440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C3C0D9203A7E9800346440 /* LaunchScreen.storyboard */; };
+		40C3C0E3203A7F2600346440 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C3C0E2203A7F2600346440 /* GoogleService-Info.plist */; };
+		40C3C0E8203AAEB800346440 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0E7203AAEB800346440 /* LoginViewController.swift */; };
+		E605497289E453CEE7DBF4CA /* Pods_uMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDBF60BEAE4031FEDC50C97 /* Pods_uMessage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		40C3C0CD203A7E9800346440 /* uMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C3C0D0203A7E9800346440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		40C3C0D2203A7E9800346440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		40C3C0D5203A7E9800346440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40C3C0D7203A7E9800346440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C3C0DA203A7E9800346440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40C3C0DC203A7E9800346440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C3C0E2203A7F2600346440 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		40C3C0E7203AAEB800346440 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		47CF322A80FD754410B7492A /* Pods-uMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uMessage/Pods-uMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		EEDBF60BEAE4031FEDC50C97 /* Pods_uMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E800D48E8AC7BA331FE8C3 /* Pods-uMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-uMessage/Pods-uMessage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E605497289E453CEE7DBF4CA /* Pods_uMessage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +45,13 @@
 		40C3C0C4203A7E9800346440 = {
 			isa = PBXGroup;
 			children = (
+				40C3C0E6203AAE8D00346440 /* Controller */,
+				40C3C0E5203AAE8700346440 /* View */,
+				40C3C0E4203AAE7E00346440 /* Modal */,
 				40C3C0CF203A7E9800346440 /* uMessage */,
 				40C3C0CE203A7E9800346440 /* Products */,
+				8733D8955E271EA1C4252D55 /* Pods */,
+				63BB206BBC92A692BF170EF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +67,52 @@
 			isa = PBXGroup;
 			children = (
 				40C3C0D0203A7E9800346440 /* AppDelegate.swift */,
-				40C3C0D2203A7E9800346440 /* ViewController.swift */,
-				40C3C0D4203A7E9800346440 /* Main.storyboard */,
 				40C3C0D7203A7E9800346440 /* Assets.xcassets */,
 				40C3C0D9203A7E9800346440 /* LaunchScreen.storyboard */,
 				40C3C0DC203A7E9800346440 /* Info.plist */,
+				40C3C0E2203A7F2600346440 /* GoogleService-Info.plist */,
 			);
 			path = uMessage;
+			sourceTree = "<group>";
+		};
+		40C3C0E4203AAE7E00346440 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		40C3C0E5203AAE8700346440 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40C3C0D4203A7E9800346440 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40C3C0E6203AAE8D00346440 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40C3C0E7203AAEB800346440 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63BB206BBC92A692BF170EF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEDBF60BEAE4031FEDC50C97 /* Pods_uMessage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8733D8955E271EA1C4252D55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47CF322A80FD754410B7492A /* Pods-uMessage.debug.xcconfig */,
+				F7E800D48E8AC7BA331FE8C3 /* Pods-uMessage.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40C3C0DF203A7E9800346440 /* Build configuration list for PBXNativeTarget "uMessage" */;
 			buildPhases = (
+				FA35AAEA9F79554C377D377F /* [CP] Check Pods Manifest.lock */,
 				40C3C0C9203A7E9800346440 /* Sources */,
 				40C3C0CA203A7E9800346440 /* Frameworks */,
 				40C3C0CB203A7E9800346440 /* Resources */,
+				C5C2E72AFE9E57BAEE1328E4 /* [CP] Embed Pods Frameworks */,
+				3D99BECE5EFA1F640F3E72B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,18 +179,81 @@
 			files = (
 				40C3C0DB203A7E9800346440 /* LaunchScreen.storyboard in Resources */,
 				40C3C0D8203A7E9800346440 /* Assets.xcassets in Resources */,
+				40C3C0E3203A7F2600346440 /* GoogleService-Info.plist in Resources */,
 				40C3C0D6203A7E9800346440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D99BECE5EFA1F640F3E72B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uMessage/Pods-uMessage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C2E72AFE9E57BAEE1328E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-uMessage/Pods-uMessage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uMessage/Pods-uMessage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA35AAEA9F79554C377D377F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-uMessage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40C3C0C9203A7E9800346440 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40C3C0D3203A7E9800346440 /* ViewController.swift in Sources */,
+				40C3C0E8203AAEB800346440 /* LoginViewController.swift in Sources */,
 				40C3C0D1203A7E9800346440 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +389,7 @@
 		};
 		40C3C0E0203A7E9800346440 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47CF322A80FD754410B7492A /* Pods-uMessage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +405,7 @@
 		};
 		40C3C0E1203A7E9800346440 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7E800D48E8AC7BA331FE8C3 /* Pods-uMessage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
