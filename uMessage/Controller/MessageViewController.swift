@@ -37,17 +37,16 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         if messageId != "" && messageId != nil{
             loadData()
         }
-//        //MARK:For keyboard
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+       //MARK:For keyboard
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismisKeyboard))
         view.addGestureRecognizer(tap)
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)){
-//            self.moveToBottom()
-//
-//        }
+        
         tableView.separatorStyle = .none
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     //MARK:Tableview functions
@@ -90,31 +89,29 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.reloadData()
         }
     }
-//    @objc func keyboardWillShow(notify:NSNotification){
-//        if let keyboardSize = (notify.userInfo![UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue{
-//            if self.view.frame.origin.y == 0{
-//                self.view.frame.origin.y += keyboardSize.height
-//            }
-    
-//        }
-//    }
-//    @objc func keyboardWillHide(notify:NSNotification){
-//        if let keyboardSize = (notify.userInfo![UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue{
-//            if self.view.frame.origin.y != 0{
-//                self.view.frame.origin.y -= keyboardSize.height
-//            }
-//    }
-//
-//}
+
     @objc func dismisKeyboard(){
         messageField.endEditing(true)
     }
-//    func moveToBottom(){
-//        if messages.count > 0{
-//            let indexPath = IndexPath(row: messages.count-1, section: 1)
-//            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-//        }
-//    }
+    func moveToBottom(){
+        if messages.count > 0{
+            let indexPath = IndexPath(row: messages.count-1, section: 1)
+            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    @objc func keyboardWillShow(notification:NSNotification){
+
+//         messView.frame = CGRect(x: self.messView.frame.origin.x, y: self.messView.frame.origin.y - 255, width: self.messView.frame.size.width, height: self.messView.frame.size.height)
+        //messView.frame.applying(CGAffineTransform(scaleX: messView.frame.origin.x, y: messView.frame.origin.y - 255))
+        messView.transform = CGAffineTransform(translationX: 0, y: view.frame.origin.y - 256)
+        
+        view.layoutIfNeeded()
+    }
+    @objc func keyboardWillHide(notification:NSNotification){
+        
+        messView.transform = CGAffineTransform(translationX: 0, y: view.frame.origin.y )
+        view.setNeedsLayout()
+    }
     
     
     //MARK:IBActions
@@ -160,22 +157,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func BackPressed(_ sender: UIButton) {
      dismiss(animated: true, completion: nil)
     }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-           // self.height.constant = 308
-            
-            self.messView.frame.origin.y = 360
-            
-            self.view.layoutIfNeeded()
-        }
-        
-    }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-            self.height.constant = 50
-            self.view.layoutIfNeeded()
-        }
-    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         messageField.resignFirstResponder()
         return true
