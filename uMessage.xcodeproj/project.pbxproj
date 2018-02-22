@@ -13,6 +13,16 @@
 		40C3C0DB203A7E9800346440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C3C0D9203A7E9800346440 /* LaunchScreen.storyboard */; };
 		40C3C0E3203A7F2600346440 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C3C0E2203A7F2600346440 /* GoogleService-Info.plist */; };
 		40C3C0E8203AAEB800346440 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0E7203AAEB800346440 /* LoginViewController.swift */; };
+		40C3C0EA203AD1E200346440 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0E9203AD1E200346440 /* signUpViewController.swift */; };
+		40C3C0EC203B1D5200346440 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0EB203B1D5200346440 /* ChatViewController.swift */; };
+		40C3C0EF203B1EFE00346440 /* ChatDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0EE203B1EFE00346440 /* ChatDetailTableViewCell.swift */; };
+		40C3C0F1203B201E00346440 /* MessageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0F0203B201E00346440 /* MessageDetail.swift */; };
+		40C3C0F3203B41A500346440 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0F2203B41A500346440 /* MessageViewController.swift */; };
+		40C3C0F5203C0C6E00346440 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0F4203C0C6E00346440 /* MessageTableViewCell.swift */; };
+		40C3C0F7203C0C8F00346440 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0F6203C0C8F00346440 /* Message.swift */; };
+		40C3C0F9203C462600346440 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0F8203C462600346440 /* SearchViewController.swift */; };
+		40C3C0FB203C47F900346440 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0FA203C47F900346440 /* SearchTableViewCell.swift */; };
+		40C3C0FD203C498400346440 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3C0FC203C498400346440 /* Search.swift */; };
 		E605497289E453CEE7DBF4CA /* Pods_uMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDBF60BEAE4031FEDC50C97 /* Pods_uMessage.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +35,16 @@
 		40C3C0DC203A7E9800346440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C3C0E2203A7F2600346440 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40C3C0E7203AAEB800346440 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		40C3C0E9203AD1E200346440 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		40C3C0EB203B1D5200346440 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		40C3C0EE203B1EFE00346440 /* ChatDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailTableViewCell.swift; sourceTree = "<group>"; };
+		40C3C0F0203B201E00346440 /* MessageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetail.swift; sourceTree = "<group>"; };
+		40C3C0F2203B41A500346440 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		40C3C0F4203C0C6E00346440 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		40C3C0F6203C0C8F00346440 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		40C3C0F8203C462600346440 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		40C3C0FA203C47F900346440 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		40C3C0FC203C498400346440 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		47CF322A80FD754410B7492A /* Pods-uMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uMessage/Pods-uMessage.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDBF60BEAE4031FEDC50C97 /* Pods_uMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E800D48E8AC7BA331FE8C3 /* Pods-uMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-uMessage/Pods-uMessage.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,9 +65,6 @@
 		40C3C0C4203A7E9800346440 = {
 			isa = PBXGroup;
 			children = (
-				40C3C0E6203AAE8D00346440 /* Controller */,
-				40C3C0E5203AAE8700346440 /* View */,
-				40C3C0E4203AAE7E00346440 /* Modal */,
 				40C3C0CF203A7E9800346440 /* uMessage */,
 				40C3C0CE203A7E9800346440 /* Products */,
 				8733D8955E271EA1C4252D55 /* Pods */,
@@ -66,9 +83,12 @@
 		40C3C0CF203A7E9800346440 /* uMessage */ = {
 			isa = PBXGroup;
 			children = (
+				40C3C0E4203AAE7E00346440 /* Modal */,
+				40C3C0E5203AAE8700346440 /* View */,
+				40C3C0ED203B1EDC00346440 /* Cells */,
+				40C3C0E6203AAE8D00346440 /* Controller */,
 				40C3C0D0203A7E9800346440 /* AppDelegate.swift */,
 				40C3C0D7203A7E9800346440 /* Assets.xcassets */,
-				40C3C0D9203A7E9800346440 /* LaunchScreen.storyboard */,
 				40C3C0DC203A7E9800346440 /* Info.plist */,
 				40C3C0E2203A7F2600346440 /* GoogleService-Info.plist */,
 			);
@@ -78,6 +98,9 @@
 		40C3C0E4203AAE7E00346440 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				40C3C0F0203B201E00346440 /* MessageDetail.swift */,
+				40C3C0F6203C0C8F00346440 /* Message.swift */,
+				40C3C0FC203C498400346440 /* Search.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -85,6 +108,7 @@
 		40C3C0E5203AAE8700346440 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				40C3C0D9203A7E9800346440 /* LaunchScreen.storyboard */,
 				40C3C0D4203A7E9800346440 /* Main.storyboard */,
 			);
 			path = View;
@@ -94,8 +118,22 @@
 			isa = PBXGroup;
 			children = (
 				40C3C0E7203AAEB800346440 /* LoginViewController.swift */,
+				40C3C0E9203AD1E200346440 /* signUpViewController.swift */,
+				40C3C0EB203B1D5200346440 /* ChatViewController.swift */,
+				40C3C0F2203B41A500346440 /* MessageViewController.swift */,
+				40C3C0F8203C462600346440 /* SearchViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		40C3C0ED203B1EDC00346440 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				40C3C0EE203B1EFE00346440 /* ChatDetailTableViewCell.swift */,
+				40C3C0F4203C0C6E00346440 /* MessageTableViewCell.swift */,
+				40C3C0FA203C47F900346440 /* SearchTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		63BB206BBC92A692BF170EF8 /* Frameworks */ = {
@@ -212,6 +250,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/iProgressHUD/iProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -220,6 +259,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -253,8 +293,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C3C0F9203C462600346440 /* SearchViewController.swift in Sources */,
+				40C3C0FD203C498400346440 /* Search.swift in Sources */,
 				40C3C0E8203AAEB800346440 /* LoginViewController.swift in Sources */,
 				40C3C0D1203A7E9800346440 /* AppDelegate.swift in Sources */,
+				40C3C0EC203B1D5200346440 /* ChatViewController.swift in Sources */,
+				40C3C0FB203C47F900346440 /* SearchTableViewCell.swift in Sources */,
+				40C3C0F7203C0C8F00346440 /* Message.swift in Sources */,
+				40C3C0EF203B1EFE00346440 /* ChatDetailTableViewCell.swift in Sources */,
+				40C3C0F1203B201E00346440 /* MessageDetail.swift in Sources */,
+				40C3C0F5203C0C6E00346440 /* MessageTableViewCell.swift in Sources */,
+				40C3C0EA203AD1E200346440 /* signUpViewController.swift in Sources */,
+				40C3C0F3203B41A500346440 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
