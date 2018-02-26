@@ -35,6 +35,7 @@ class ChatDetailTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
     }
     
     func configureCell(messageDetail:MessageDetail){
@@ -46,11 +47,11 @@ class ChatDetailTableViewCell: UITableViewCell {
             if let data = snapshot.value as? Dictionary<String,AnyObject>{
                 let username = data["username"]
                 let userImg = data["userImg"]
-                
                 self.userIdLabel.text = username as? String
                 self.userMsgDescrip.text = messageDetail.prevMsg
                 
                 let ref = Storage.storage().reference(forURL: userImg as! String)
+              //  print("lolol is \(userImg as! String)")
                 ref.getData(maxSize: 100000, completion: { (data, error) in
                     if error != nil{
                         print("error loading image")

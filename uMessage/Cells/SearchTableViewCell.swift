@@ -32,11 +32,13 @@ class SearchTableViewCell: UITableViewCell {
     func configCell(search:Search){
         self.searchDetail = search
         self.nameLabel.text = searchDetail.username
-        let ref = Storage.storage().reference(forURL: search.userImg)
-        ref.getData(maxSize: 10000) { (data, error) in
+       // print("it is \(searchDetail.userImg)")
+        let ref = Storage.storage().reference(forURL: searchDetail.userImg as String)
+        ref.getData(maxSize: 100000000) { (data, error) in
             if error != nil{
                 print("we couldnt upload the image")
             }else{
+                
                 if let imageData = data{
                     if let image = UIImage(data: imageData){
                         self.img.image = image

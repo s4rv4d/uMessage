@@ -36,15 +36,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 for data in snapshot{
                     if let postDict = data.value as? Dictionary<String,AnyObject>{
                         let key = data.key
-                        print("key \(key)")
+                        //print("key \(key)")
                         let post = Search(userKey: key, postData: postDict)
-                        print("the data in search part is \(postDict)")
+                        //print("the data in search part is \(postDict)")
                         self.searchDetail.append(post)
                     }
                 }
             }
             self.tableView.reloadData()
         }
+//        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = 91
+//        CFNETWORK_DIAGNOSTICS = 1
     }
     //MARK:Segue functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -89,6 +92,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             recipient = searchDetail[indexPath.row].userKey
             print("reci user key is \(recipient)")
         }
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "toMessage", sender: nil)
     }
     

@@ -26,6 +26,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var messView: UIView!
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var height: NSLayoutConstraint!
+    @IBOutlet weak var userNameBoiii: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,8 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         message = messages[indexPath.row]
-        print("thecurrent msg is\(message.messageKey)")
+        //print("thecurrent msg is\(message.messageKey)")
+       // userNameBoiii.text = message.sender
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as? MessageTableViewCell{
             cell.configCell(message: message)
             return cell
@@ -72,6 +74,12 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //MARK:Functions
     func loadData(){
+        Database.database().reference().child("users").child(recipient).observe(.value) { (snapshot) in
+            if let data = snapshot.value as? Dictionary<String,AnyObject>{
+                let username = data["username"]
+                self.userNameBoiii.text = username as? String
+            }
+        }
         Database.database().reference().child("messages").child(messageId).observe(.value) { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
                 self.messages.removeAll()
@@ -100,9 +108,6 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     @objc func keyboardWillShow(notification:NSNotification){
-
-//         messView.frame = CGRect(x: self.messView.frame.origin.x, y: self.messView.frame.origin.y - 255, width: self.messView.frame.size.width, height: self.messView.frame.size.height)
-        //messView.frame.applying(CGAffineTransform(scaleX: messView.frame.origin.x, y: messView.frame.origin.y - 255))
         messView.transform = CGAffineTransform(translationX: 0, y: view.frame.origin.y - 256)
         
         view.layoutIfNeeded()
@@ -124,7 +129,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let message:Dictionary<String,AnyObject> = ["lastMessage":messageField.text as AnyObject,"user":currentUser! as AnyObject]
                 let userMessage:Dictionary<String,AnyObject> = ["lastMessage":messageField.text as AnyObject,"user":recipient as AnyObject]
                 messageId = Database.database().reference().child("messages").childByAutoId().key
-                print("message id is \(messageId)")
+                //print("message id is \(messageId)")
                 
                 let firebaseMessage = Database.database().reference().child("messages").child(messageId).childByAutoId()
                 firebaseMessage.setValue(post)
@@ -155,7 +160,8 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     @IBAction func BackPressed(_ sender: UIButton) {
-     dismiss(animated: true, completion: nil)
+     //dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "goBackToChat", sender: nil)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

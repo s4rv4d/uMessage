@@ -36,14 +36,14 @@ class MessageTableViewCell: UITableViewCell {
     func configCell(message:Message){
         self.message = message
         
-        print(message.sender)
-        print("current is \(currentUser!)")
-        
+//        print(message.sender)
+//        print("current is \(currentUser!)")
+//
         if message.sender == currentUser{
             sentMsgView.isHidden = false
             sentMessageLabel.text = message.message
-            print(sentMessageLabel.text as Any)
-            print("if part")
+//            print(sentMessageLabel.text as Any)
+//            print("if part")
             recievedMessageLabel.text = ""
             recievedMsgView.isHidden = true
             
@@ -51,8 +51,8 @@ class MessageTableViewCell: UITableViewCell {
             sentMsgView.isHidden = true
             sentMessageLabel.text = ""
             recievedMessageLabel.text = message.message
-            print(recievedMessageLabel.text as Any)
-            print("else part")
+//            print(recievedMessageLabel.text as Any)
+//            print("else part")
             recievedMsgView.isHidden = false
         }
     }

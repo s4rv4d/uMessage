@@ -31,7 +31,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         if let current = KeychainWrapper.standard.string(forKey: "uid"){
-            print("already logged in")
+//            print("already logged in")
             print("currently\(current)")
             performSegue(withIdentifier: "toMessages", sender: nil)
         }
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 if error == nil{
                     self.userUid = user?.uid
                     KeychainWrapper.standard.set(self.userUid, forKey: "uid")
-                    print("uid set")
+                    //print("uid set")
                     
                     self.view.dismissProgress()
                     self.performSegue(withIdentifier: "toMessages", sender: nil)
@@ -78,8 +78,10 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     //MARK:Textfields methods
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        switch textField.tag{
-        case 2: scrollView.setContentOffset(CGPoint.init(x: 0, y: 170), animated: true)
+        switch textField{
+        case passwordTextfield: scrollView.setContentOffset(CGPoint.init(x: 0, y: 150), animated: true)
+            break
+        case emailTextfield: scrollView.setContentOffset(CGPoint.init(x: 0, y: 140), animated: true)
             break
         default:
             break

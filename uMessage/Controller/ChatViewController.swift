@@ -24,11 +24,12 @@ class ChatViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     var currentUser = KeychainWrapper.standard.string(forKey: "uid")
     var recipient:String!
     var messageId:String!
+    var testPassUserName:String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("for chat view")
+        //print("for chat view")
         Database.database().reference().child("users").child(currentUser!).child("messages").observe(.value) { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
                 print(snapshot)
@@ -37,9 +38,9 @@ class ChatViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                 for data in snapshot{
                     if let messageDict = data.value as? Dictionary<String,AnyObject>{
                         let key = data.key
-                        print("key is \(key)")
+                        //print("key is \(key)")
                         let info  = MessageDetail(messageKey: key, messageData: messageDict)
-                        print("dict is \(messageDict)")
+                        //print("dict is \(messageDict)")
                         self.messageDetail.append(info)
                     }
                 }
@@ -47,6 +48,7 @@ class ChatViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             self.tableview.reloadData()
             
         }
+        tableview.separatorStyle = .singleLine
         
        
     }
@@ -67,19 +69,17 @@ class ChatViewController: UIViewController,UITableViewDelegate, UITableViewDataS
        
         
         let message = messageDetail[indexPath.row]
-        if let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ChatDetailTableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ChatDetailTableViewCell
         
-            cell.configureCell(messageDetail: message)
-         
-            return cell
-           
-        
-        }else{
-           
-        return ChatDetailTableViewCell()
+        cell?.configureCell(messageDetail: message)
+          // print("dskdk \(testPassUserName)")
+        return cell!
             
-        }
+    
         
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 44
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         recipient = messageDetail[indexPath.row].recipient
@@ -90,11 +90,13 @@ class ChatViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     
     
+    
     //MARK:Segue functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? MessageViewController {
             destination.recipient = recipient
             destination.messageId = messageId
+//            destination.userNameBoiii.text = testPassUserName
         }
     }
     
