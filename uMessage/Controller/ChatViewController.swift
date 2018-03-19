@@ -99,12 +99,12 @@ class ChatViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 //            destination.userNameBoiii.text = testPassUserName
         }
     }
-    
     //MARK:IBActions
     @IBAction func signOut(_ sender:AnyObject){
         try! Auth.auth().signOut()
         KeychainWrapper.standard.removeObject(forKey: "uid")
         print("removed uid")
+         //performSegue(withIdentifier: "signedOut", sender: self)
         dismiss(animated: true, completion: nil)
     }
 }

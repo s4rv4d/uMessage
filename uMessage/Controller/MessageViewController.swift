@@ -160,8 +160,8 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     @IBAction func BackPressed(_ sender: UIButton) {
-     //dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: "goBackToChat", sender: nil)
+     dismiss(animated: true, completion: nil)
+       // performSegue(withIdentifier: "goBackToChat", sender: nil)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

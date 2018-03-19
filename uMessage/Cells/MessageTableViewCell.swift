@@ -20,30 +20,15 @@ class MessageTableViewCell: UITableViewCell {
     //MARK:Variables
     var message:Message!
     var currentUser = KeychainWrapper.standard.string(forKey: "uid")
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+   
+    //MARK:Functions
     func configCell(message:Message){
         self.message = message
         
-//        print(message.sender)
-//        print("current is \(currentUser!)")
-//
+
         if message.sender == currentUser{
             sentMsgView.isHidden = false
             sentMessageLabel.text = message.message
-//            print(sentMessageLabel.text as Any)
-//            print("if part")
             recievedMessageLabel.text = ""
             recievedMsgView.isHidden = true
             
@@ -51,8 +36,6 @@ class MessageTableViewCell: UITableViewCell {
             sentMsgView.isHidden = true
             sentMessageLabel.text = ""
             recievedMessageLabel.text = message.message
-//            print(recievedMessageLabel.text as Any)
-//            print("else part")
             recievedMsgView.isHidden = false
         }
     }
